@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@AutoConfigureWireMock(port = 0, stubs = "classpath:/stubs/todo-service")
+@AutoConfigureWireMock(port = 0)
 @TestPropertySource(properties = {
     "todos.url=http://localhost:${wiremock.server.port}"
 })
