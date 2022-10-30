@@ -12,9 +12,9 @@ public class TodoService {
     @Value("${todos.url}")
     private String baseUrl;
 
-    public Todo test() {
+    public Todo test(Long id) {
         var responseEntity = new RestTemplate().exchange(
-                baseUrl + "/todos/1", HttpMethod.GET, null, Todo.class);
+                baseUrl + "/todos/" + id, HttpMethod.GET, null, Todo.class);
         return responseEntity.getBody();
     }
 }

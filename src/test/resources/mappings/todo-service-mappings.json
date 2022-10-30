@@ -1,0 +1,30 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "url": "/todos/1",
+        "method": "GET"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "todo/todo1.json"
+      }
+    },
+    {
+      "request": {
+        "url": "/todos/2",
+        "method": "GET"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "todo/todo2.json"
+      }
+    }
+  ]
+}

@@ -21,12 +21,19 @@ class TodoServiceTest {
     private TodoService todoService;
 
     @Test
-    void test1() {
-        Todo todo = todoService.test();
-        assertEquals("Todo 1",todo.getTitle());
-        assertFalse(todo.isCompleted());
-        assertEquals(1L, todo.getId());
-        assertEquals(1L, todo.getUserId());
+    void todoServiceTest() {
+        Todo todo1 = todoService.test(1L);
+        assertEquals("Todo 1",todo1.getTitle());
+        assertFalse(todo1.isCompleted());
+        assertEquals(1L, todo1.getId());
+        assertEquals(1L, todo1.getUserId());
+
+
+        Todo todo2 = todoService.test(2L);
+        assertEquals("Todo 2",todo2.getTitle());
+        assertFalse(todo2.isCompleted());
+        assertEquals(2L, todo2.getId());
+        assertEquals(2L, todo2.getUserId());
     }
 
 }
