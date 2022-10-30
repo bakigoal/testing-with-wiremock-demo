@@ -36,4 +36,9 @@ class TodoServiceTest {
         assertEquals(2L, todo2.getUserId());
     }
 
+    @Test
+    void todoServiceDelayTest() {
+        Todo todo = todoService.test(3L);
+        assertEquals("Todo 3",todo.getTitle());
+    }
 }

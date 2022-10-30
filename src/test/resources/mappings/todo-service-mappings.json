@@ -23,7 +23,26 @@
         "headers": {
           "Content-Type": "application/json"
         },
-        "bodyFileName": "todo/todo2.json"
+        "bodyFileName": "todo/todo2.json",
+        "fixedDelayMilliseconds": 3000
+      }
+    },
+    {
+      "request": {
+        "url": "/todos/3",
+        "method": "GET"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "todo/todo3.json",
+        "delayDistribution": {
+          "type": "uniform",
+          "lower": 1000,
+          "upper": 5000
+        }
       }
     }
   ]
